@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // @ts-ignore
-import {CardModule} from "my-lib/card";
+import { CardModule } from "my-lib/card";
 
 
 
