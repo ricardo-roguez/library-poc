@@ -12,9 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "my-lib": [
-        "dist/my-lib"
-      ],
+      "my-lib/*": ["dist/my-lib/*/public_api"],
+      "my-lib": ["dist/my-lib"]
     },
     "declaration": false,
     "downlevelIteration": true,

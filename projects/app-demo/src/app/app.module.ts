@@ -3,14 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyLibModule } from "my-lib";
+// @ts-ignore
+import {CardModule} from "my-lib/card";
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
-      MyLibModule,
+    CardModule,
     BrowserModule,
     AppRoutingModule
   ],
