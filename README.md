@@ -1,27 +1,28 @@
-# ProcurementLib
+# POC de librería
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+En este proyecto tenemos una librería junto con un proyecto de angular que puede consumir dicha librería.
 
-## Development server
+Los pasos a seguir para levantar todo son los siguientes:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 1 Levantar la librería
+`npm run build-lib`
 
-## Code scaffolding
+Este comando compila la librería y lo manda a la carpeta /dist/. También tiene un watch que hace que por cada cambio haya una recompilación automática
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 2 Levantar la app
 
-## Build
+`npm run start`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este comando levanta la app en el puerto correspondiente
 
-## Running unit tests
+### Uso de los módulos de la librería
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+La librería está pensada para poder realizar imports de los módulos. De esta manera, si queremos importar el módulo de cards podemos hacer lo siguiente:
 
-## Running end-to-end tests
+`import { CardModule } from "my-lib/card";`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para ello, cada paquete tiene su propio `ng-package.json` y un `public_api.ts`
 
-## Further help
+El fichero `projects/my-lib/src/components/tsconfig.lib.json` también se ha modificado respecto al generado de angular 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para hacer todo esto me he basado en ngprime
