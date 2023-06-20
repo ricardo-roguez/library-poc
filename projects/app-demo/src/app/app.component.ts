@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-// @ts-ignore
-import { ErrorHandlerService } from 'my-lib/error';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +6,8 @@ import { ErrorHandlerService } from 'my-lib/error';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private errorService: ErrorHandlerService) {}
 
+  triggerError(): void {
+    throw new Error('castañazo');
+  }
 }

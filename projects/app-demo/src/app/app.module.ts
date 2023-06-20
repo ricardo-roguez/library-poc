@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,9 +7,8 @@ import { CardModule } from 'my-lib/card';
 import { ErrorModule, Config, ErrorHandlerService } from 'my-lib/error';
 
 
-
 const config: Config = {
-  key: 'qué pasa Xavi'
+  key: 'app-demo-application'
 }
 
 @NgModule({
@@ -22,6 +21,12 @@ const config: Config = {
     AppRoutingModule,
     ErrorModule.forRoot(config)
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    {
+      provide: ErrorHandler,
+      useClass: ErrorHandlerService,
+    }
+  ]
 })
 export class AppModule { }
