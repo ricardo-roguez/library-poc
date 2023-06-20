@@ -10,15 +10,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/my-lib/src/components/ng-package.json",
-            "tsConfig": "projects/my-lib/src/components/tsconfig.lib.prod.json"
+            "project": "projects/my-lib/src/ng-package.json",
+            "tsConfig": "projects/my-lib/src/tsconfig.lib.prod.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/my-lib/src/components/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-lib/src/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/my-lib/src/components/tsconfig.lib.json"
+              "tsConfig": "projects/my-lib/src/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
