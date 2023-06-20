@@ -1,4 +1,4 @@
-﻿import {Component} from "@angular/core";
+﻿import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: 'procurement-card',
@@ -6,5 +6,6 @@
     styleUrls: ['procurement-card.scss']
 })
 export class ProcurementCard {
+
     
 }

@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// @ts-ignore
-import { CardModule } from "my-lib/card";
+import { CardModule } from 'my-lib/card';
+import { ErrorModule, Config, ErrorHandlerService } from 'my-lib/error';
 
 
+
+const config: Config = {
+  key: 'qué pasa Xavi'
+}
 
 @NgModule({
   declarations: [
@@ -15,9 +19,10 @@ import { CardModule } from "my-lib/card";
   imports: [
     CardModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ErrorModule.forRoot(config)
   ],
-  providers: [],
+  providers: [ErrorHandlerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
