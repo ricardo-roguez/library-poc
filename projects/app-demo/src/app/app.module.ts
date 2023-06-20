@@ -22,7 +22,6 @@ const config: Config = {
     AppRoutingModule,
     ErrorModule.forRoot(config)
   ],
-  providers: [ErrorHandlerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

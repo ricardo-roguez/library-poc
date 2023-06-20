@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 // @ts-ignore
 import { ErrorHandlerService } from 'my-lib/error';
 
@@ -7,9 +7,7 @@ import { ErrorHandlerService } from 'my-lib/error';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  
-  ngOnInit(): void {
-    throw new Error('cosa');
-  }
+export class AppComponent {
+  constructor(private errorService: ErrorHandlerService) {}
+
 }
