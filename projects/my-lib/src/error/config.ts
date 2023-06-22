@@ -3,5 +3,5 @@
 export const CONFIG = new InjectionToken<Config>('config');
 
 export interface Config {
-    key?: string;
+    key: string;
 }

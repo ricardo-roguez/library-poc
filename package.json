@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build-lib": "ng build my-lib --watch",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test-lib": "ng test my-lib",
+    "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {

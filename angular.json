@@ -27,8 +27,8 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/my-lib/src/test.ts",
-            "tsConfig": "projects/my-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/my-lib/karma.conf.js"
+            "tsConfig": "projects/my-lib/src/tsconfig.spec.json",
+            "karmaConfig": "projects/my-lib/src/karma.conf.js"
           }
         }
       }
